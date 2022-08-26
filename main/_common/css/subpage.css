@@ -1,0 +1,653 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+=== subpage
+========================================================================== */
+
+.select{
+	position: relative;
+}
+.select::after{
+	content: "\25bc";
+	display: block;
+	font-size: 16px;
+	position: absolute;
+	right: 2em;
+	left: auto;
+	top: 50%;
+	bottom: auto;
+	line-height: 1;
+	transform: translate(0,-50%);
+	width: 16px;
+	height: 16px;
+	color: #666;
+	padding: 0 0 1.2em 0;
+	pointer-events: none;
+}
+/* head
+========================================================================== */
+.head{
+	position: static;
+}
+/* main
+========================================================================== */
+
+#main {
+	background-color: #fffff1;
+}
+
+/* common(overwrite)
+========================================================================== */
+
+.section_ttl {
+	text-align: center;
+	font-size: 5rem;
+	position: relative;
+	font-style: italic;
+	font-weight: normal;
+	color: #fff;
+	background-color: #d25417;
+	line-height: 1.2;
+	letter-spacing: 0;
+	padding: 29px 0 37px;
+}
+
+
+/* inquiry
+========================================================================== */
+
+.inquiry_inr {
+	width: 1065px;
+	max-width: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 66px 0 5px 12px;
+}
+.inquiry_inr.error,
+.inquiry_inr.confirm{
+/*	padding: 66px 0 446px 12px;*/
+	min-height: 100vh;
+}
+
+.inquiry_lead {
+	font-size: 3rem;
+	text-align: center;
+	line-height: 1.68;
+}
+.error .inquiry_lead,
+.confirm .inquiry_lead{
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.error .btn{
+	margin: 72px auto 0;
+	display: block;
+}
+
+.error .error_messe{
+	font-size: 1.8rem;
+	text-align: center;
+	line-height: 2;
+	display: block;
+}
+.error .message{
+	margin-bottom: 3em;
+}
+#inquiry_box #title {
+	margin-bottom: 50px;
+}
+
+#inquiry_box dl {
+	font-size: 1.8rem;
+	display: table;
+	width: 100%;
+	max-width: 100%;
+	border-bottom: 2px dotted #036eb4;
+}
+
+#inquiry_box dl dt {
+	width: 19.9%;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 .5em .3em 0;
+	line-height: 1.3;
+}
+
+#inquiry_box dl dt span {
+	font-size: 1.4rem;
+	padding-left: .5em;
+	vertical-align: .1em;
+}
+
+#inquiry_box dl dt span.cat,
+.error_messe {
+	color: #CC0000;
+	display: inline-block;
+}
+.error_messe{
+	padding-left: 0;
+}
+
+#inquiry_box dl dd {
+	padding: 0.8em 0 1.2em 0;
+	display: table-cell;
+}
+
+#inquiry_box dl dd > span{
+	display: inline-block;
+	width: 100%;
+	max-width: 100%;
+}
+#inquiry_box dl.date dd > span{
+	width: auto;
+}
+#inquiry_box dl .annotation.for_pc{
+	display: inline-block;
+	width: auto;
+	max-width: inherit;
+}
+#inquiry_box dl .annotation.for_sp{
+	display: none;
+}
+
+#inquiry_box.confirm dl {
+	padding-top: 0;
+	padding-bottom: 0;
+	min-height: 60px;
+}
+#inquiry_box.confirm dl dt {
+	width: 19.9%;
+	display: table-cell;
+	vertical-align: top;
+	padding: 1.3em 0;
+	line-height: 1.8;
+	font-weight: normal;
+}
+#inquiry_box.confirm dl dd{
+	padding-top: 1.2em;
+	padding-left: 2em;
+	vertical-align: middle;
+	line-height: 1.8;
+	word-break: break-all;
+	font-weight: normal;
+}
+#inquiry_box.confirm .form_btn_box{
+	margin: 85px auto 54px;
+	text-align: center;
+}
+
+#inquiry_box .btn_topback {
+	margin: 0 auto;
+	width: 69.5%;
+}
+
+#inquiry_box .form_box {
+	width: 96.2%;
+	margin: 44px auto;
+	font-size: 1.8rem;
+}
+
+#inquiry_box .form_box h2 {
+	font-size: 1.6rem;
+	text-align: center;
+}
+
+#inquiry_box .form_box form p input {
+	margin: 50px 10px 0 0;
+}
+
+.ui-datepicker-calendar th.ui-datepicker-week-end{
+	width: 1em;
+}
+.ui-datepicker-calendar td,
+.ui-datepicker-calendar td span,
+.ui-datepicker-calendar td a{
+	text-align: center;
+}
+
+#inquiry_box.thanks .inquiry_lead p{
+	font-size: 2.4rem;
+}
+#inquiry_box.thanks .inquiry_lead .attention{
+	color: #bf0d23;
+	margin-top: 1.8em;
+	word-break: break-all;
+}
+#inquiry_box.thanks .access_sns{
+	background: none;
+	border: none;
+}
+#inquiry_box.thanks .access_sns .access_sns_area {
+	padding-top: 53px;
+	max-width: 100%;
+	width: 95%;
+	margin: 0 0 0 20px;
+}
+.inquiry_inr.thanks {
+	padding-bottom: 54px;
+}
+
+
+/*---------------------form---------------------*/
+
+#inquiry_box input[type=text],
+#inquiry_box select,
+#inquiry_box option,
+#inquiry_box textarea {
+	box-sizing: border-box;
+	background: #FFF;
+	border-radius: 10px;
+	line-height: 48px;
+	font-size: 1.8rem;
+	width: 97.7%;
+	max-width: 100%;
+	border: 2px solid #caccc4;
+	min-height: 50px;
+	padding: 0 .8em;
+	color: #333;
+}
+#inquiry_box .date input,
+#inquiry_box .date select{
+	margin-bottom: .5em;
+	padding: 0 .5em;
+}
+#inquiry_box input[type=text].hasDatepicker
+{
+	width: 11.5em;
+}
+#inquiry_box .sub_title{
+	margin-right: 1em;
+}
+#inquiry_box .time
+{
+	margin-left: .3em;
+	width: 6em;
+	display: inline-block;
+}
+#inquiry_box .select.time::after{
+	right: 1em;
+}
+#inquiry_box textarea {
+	min-height: 150px;
+	line-height: 1.5;
+	padding: .65em;
+}
+#inquiry_box input[type=submit],
+#inquiry_box.error input[type=submit],
+#inquiry_box.confirm input[type=submit],
+#inquiry_box input[type=button] {
+	box-sizing: border-box;
+	padding: 1em;
+	font-size: 2.4rem;
+	color: #FFF;
+/*	width: 71%;*/
+	width: 100%;
+	cursor: pointer;
+/*
+	border-radius: 15px;
+	border: 3px solid #fff;
+	box-shadow: 0 0 1vw rgba(35, 24, 21, .6);
+*/
+	border: none;
+	border-radius: 15px;
+	font-weight: 600;
+/*
+	margin-bottom: 12px;
+*/
+}
+#inquiry_box input[type=button] {
+	background: #727171;
+	background: -moz-linear-gradient(top, #727171 22%, #3e3a39 94%);
+	background: -webkit-linear-gradient(top, #727171 22%, #3e3a39 94%);
+	background: linear-gradient(to bottom, #727171 22%, #3e3a39 94%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#727171', endColorstr='#3e3a39', GradientType=0);
+}
+#inquiry_box .btn_topback input[type=button],
+#inquiry_box input[type=submit] {
+	padding: 1.1em 0 1.04em;
+/*	width: 98.5%;*/
+	width: 100%;
+	background: #ff6ba9;
+	background: -moz-linear-gradient(top, #ff6ba9 22%, #e0007f 94%);
+	background: -webkit-linear-gradient(top, #ff6ba9 22%, #e0007f 94%);
+	background: linear-gradient(to bottom, #ff6ba9 22%, #e0007f 94%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6ba9', endColorstr='#e0007f', GradientType=0);
+}
+
+#inquiry_box.confirm .form_btn_box input[type="submit"] + input {
+/*	margin-top: 51px;*/
+}
+
+#inquiry_box input + .placeholder{
+	padding-left: .3em;
+	top: .9em !important;
+}
+
+#inquiry_box textarea + .placeholder
+{
+	padding-left: .5em;
+}
+
+#inquiry_box .send {
+	margin: 40px auto 54px 14%;
+}
+.form_box .btn,
+.btn_topback.btn{
+	width: 71%;
+	border-radius: 15px;
+	border: 3px solid #fff;
+	box-shadow: 0 0 1vw rgba(35, 24, 21, .6);
+	margin: 0 auto 12px;
+	overflow: hidden;
+}
+.form_box .btn + .btn{
+	margin-top: 51px;
+}
+.sunday .ui-state-default {
+	color: red;
+}
+
+.saturday .ui-state-default {
+	color: blue;
+}
+
+.holiday .ui-state-default {
+	color: red;
+}
+.ui-widget{
+	font-size: 1.6rem;
+}
+/* for head */
+
+@media screen and (max-width: 1099px) {
+	#main {
+/*		padding-top: calc( 15.2vw + 27px );*/
+		padding-top: 27px;
+	}
+}
+
+
+/* for main contents */
+
+@media screen and (max-width: 1023px) {
+	.inquiry_lead {
+		padding-right: 2%;
+	}
+}
+
+@media screen and (max-width: 1000px) {}
+
+@media screen and (max-width: 959px) {}
+
+
+/* for footer */
+
+@media screen and (max-width: 810px) {}
+
+@media screen and (max-width: 767px) {
+	.select::after{
+		content: "\25bc";
+		display: block;
+		font-size: 10px;
+		position: absolute;
+		right: 4%;
+		left: auto;
+		bottom: auto;
+		line-height: 1;
+		transform: translate(0,-50%);
+		width: 10px;
+		height: 10px;
+		color: #666;
+		padding: 0 0 2em 0;
+		pointer-events: none;
+	}
+	#inquiry_box .select.time::after{
+	}
+	.head{
+		position: fixed;
+	}
+	#main {
+		padding-top: 15.7vw;
+	}
+	.section_ttl {
+		font-size: 6.6vw;
+		padding: 6% 0;
+	}
+	/* inquiry
+	========================================================================== */
+	.inquiry_inr{
+		padding: 10.9% 3% 15% 3%;
+	}
+	.inquiry_lead {
+		font-size: 3.9vw;
+		text-align: left;
+		line-height: 1.45;
+	}
+	/* form */
+	#inquiry_box .form_box{
+		width: 100%;
+		margin: 6.4vw auto;
+	}
+	#inquiry_box dl {
+		font-size: 3.7vw;
+		display: block;
+		width: 100%;
+		margin-bottom: 4%;
+	}
+	#inquiry_box dl dt {
+		width: 100%;
+		display: block;
+	}
+	#inquiry_box dl dt br{
+		display: none;
+	}
+	#inquiry_box dl dt span {
+		font-size: 3.2vw;
+		padding-left: .7em;
+	}
+	#inquiry_box dl dd{
+		display: block;
+		padding: 0.4em 0 1em 0;
+	}
+	#inquiry_box input[type=text],
+	#inquiry_box select,
+	#inquiry_box option,
+	#inquiry_box textarea {
+		line-height: 1.9;
+/*		font-size: 5vw;*/
+		font-size: 16px;
+		width: 100%;
+		max-width: 100%;
+		min-height: 9.5vw;
+		padding: 0 .6em;
+	}
+	#inquiry_box input[type=submit],
+	#inquiry_box.error input[type=submit],
+	#inquiry_box.confirm input[type=submit],
+	#inquiry_box input[type=button]{
+		line-height: 3.1;
+		font-size: 4.4vw;
+		width: 100%;
+/*
+		max-width: 98.5%;
+*/
+		max-width: 100%;
+/*		min-height: 14.5vw;*/
+/*		padding: 0 .6em;*/
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		display: block;
+/*		border-radius: 4.8vw;*/
+		border-radius: 2vw;
+	}
+	#inquiry_box .btn_topback input[type=button]
+	{
+		padding: 0;
+	}
+	.form_box .btn + .btn{
+		margin-top: 10%;
+	}
+	.form_box .btn,
+	.btn_topback.btn{
+		width: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+		border: 1vw solid #fff;
+/*		border-radius: 4.8vw;*/
+		border-radius: 2vw;
+
+	}
+	#inquiry_box textarea{
+		min-height: 7em;
+		padding: .3em .65em;
+	}
+	#inquiry_box input + .placeholder {
+		padding-left: 0.2em;
+		top: 50% !important;
+		left: 0 !important;
+/*		font-size: 5vw !important;*/
+		font-size: 16px !important;
+		transform: translate(0, -50%);
+		white-space: nowrap;
+	}
+	#inquiry_box input.datepicker + .placeholder{
+		top: calc( 50% - .3em ) !important;
+	}
+	#inquiry_box textarea + .placeholder
+	{
+		white-space: nowrap;
+		font-size: 16px !important;
+		top: 15% !important;
+		left: 1% !important;
+/*		font-size: 5vw !important;*/
+		transform: translate(0, -50%);
+	}
+	#inquiry_box input[type=text].hasDatepicker
+	{
+		width: 10em;
+	}
+	.ui-widget {
+/*		font-size: 5vw;*/
+		font-size: 16px;
+	}
+	#inquiry .ui-datepicker .ui-datepicker-prev span,
+	#inquiry .ui-datepicker .ui-datepicker-next span{
+		display: block;
+		position: absolute;
+		margin-left: 0;
+		top: 0;
+		margin-top: 0;
+		width: 100%;
+		height: 100%;
+		background-size: 1300%;
+	}
+	#inquiry .ui-datepicker .ui-datepicker-prev span{
+		left: 11%;
+		background-position: left 33% top 85.9%;
+	}
+	#inquiry .ui-datepicker .ui-datepicker-next span{
+		left: -15%;
+		background-position: left 19.5% top 85.9%;
+	}
+	#inquiry_box .send{
+		width: 100%;
+		margin: 9% auto 0;
+	}
+
+	/* confirm / error */
+	.inquiry_inr.error, 
+	.inquiry_inr.confirm{
+		min-height: inherit;
+		padding-bottom: 20%;
+	}
+	.error .inquiry_lead,
+	.confirm .inquiry_lead{
+		font-size: 3.7vw;
+		text-align: left;
+	}
+	#inquiry_box.confirm dl {
+		padding-top: 0;
+		padding-bottom: 0;
+		min-height: inherit;
+	}
+
+	/* confirm */
+	#inquiry_box.confirm dl dt {
+		width: 100%;
+		display: block;
+		vertical-align: top;
+		padding: .3em 0;
+		line-height: 1.8;
+	}
+	#inquiry_box.confirm dl dd {
+		padding-top: .2em;
+		padding-left: 0;
+		vertical-align: middle;
+		line-height: 1.8;
+	}
+	#inquiry_box dl .annotation.for_sp{
+		display: inline-block;
+		width: auto;
+		max-width: inherit;
+		padding-left: 1em;
+	}
+	#inquiry_box dl .annotation.for_pc{
+		display: none;
+	}
+
+	#inquiry_box.confirm .form_btn_box{
+		margin: 14% auto 0;
+	}
+	#inquiry_box.confirm .form_btn_box input[type="submit"] + input{
+		margin-top: 7%;
+	}
+	/* error */
+	.error input{
+		margin: 0 auto;
+		display: block;
+	}
+
+	.error .error_messe{
+		font-size: 3.7vw;
+		text-align: left;
+	}
+
+	.error .message {
+		margin-bottom: 10%;
+	}
+	/* thanks */
+	#inquiry_box.thanks .access_sns {
+		margin-top: 5%;
+	}
+	#inquiry_box.thanks .inquiry_lead p {
+		font-size: 3.7vw;
+	}
+	#inquiry_box .btn_topback {
+		margin: 0 auto;
+		width: 100%;
+/*		max-width: 98.5%;*/
+		max-width: 100%;
+	}
+	#inquiry_box.thanks .access_sns .access_sns_area{
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 767px) and (orientation: landscape) {}
+
+
+/* IE 9 */
+/*IE9*/
+.select:not(:target)::after{
+	display: none\9;
+}
+/* IE 10 - 11 */
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+	.select:not(:target)::after{
+		display: block;
+	}
+}
