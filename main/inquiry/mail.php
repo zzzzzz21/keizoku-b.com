@@ -305,7 +305,7 @@ else if($confirmDsp == 1){
 						</div>-->
 						<div class="head_tel_box">
 							<span class="head_chiiki head_chiiki_shin-sapporo">新さっぽろ</span><span
-								class="head_name head_name_shin-sapporo">継続支援コネクトワークス</span>
+								class="head_name head_name_connect_shin-sapporo">継続支援コネクトワークス</span>
 							<br><span class="head_tel">011-887-6831</span>
 						</div>
 						<!--<div class="head_tel_box">
